@@ -27,6 +27,7 @@ public class Ex7 {
 			e.printStackTrace();
 		} catch (ArithmeticException arithmeticException) {
 			arithmeticException.printStackTrace();
+		} finally {
 			try {
 				fis.close();
 			} catch (IOException exception) {
@@ -34,5 +35,33 @@ public class Ex7 {
 			}
 			System.out.println("사용한 리소스를 닫았습니다");
 		}
+		
+		// finally문을 사용하여 변경
+//		FileInputStream fis = null;
+//
+//		try {
+//
+//			fis = new FileInputStream("src/main/a.txt");
+//			System.out.println("a.txt 파일을 엽니다");
+//
+//			int i = 0 / 0;
+//
+//		} catch (FileNotFoundException fileNotFoundException) {
+//			fileNotFoundException.printStackTrace();
+//			
+//		} catch (ArithmeticException arithmeticException) {
+//			arithmeticException.printStackTrace();
+//			
+//		} finally { // finally 블록은 예외 발생여부와 상관없이 항상 수행됨
+//			// 스트림 닫기
+//			try {
+//				fis.close();
+//			} catch (IOException exception) {
+//				exception.printStackTrace();
+//			}
+//			System.out.println("사용한 리소스를 닫았습니다");
+//		}
+
+	}
 	}
 }
